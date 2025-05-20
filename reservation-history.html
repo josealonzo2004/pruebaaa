@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historial de Reservas - Sistema de Parqueaderos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="user-panel.html">Inicio</a>
+      <a href="availability.html">Ver disponibilidad</a>
+      <a href="space-reservation.html">Reservar</a>
+      <a href="reservation-history.html">Historial</a>
+      <a href="login.html" style="margin-left: auto;">Cerrar sesión</a>
+    </div>
+    
+    <h1>Historial de Reservas</h1>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Hora</th>
+          <th>Zona</th>
+          <th>Espacio</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>20/05/2025</td>
+          <td>08:00 - 17:00</td>
+          <td>Zona A</td>
+          <td>A-03</td>
+          <td>Pendiente</td>
+          <td>
+            <button class="btn-secondary">Cancelar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>15/05/2025</td>
+          <td>09:00 - 18:00</td>
+          <td>Zona B</td>
+          <td>B-05</td>
+          <td>Usado</td>
+          <td>
+            -
+          </td>
+        </tr>
+        <tr>
+          <td>10/05/2025</td>
+          <td>08:30 - 14:30</td>
+          <td>Zona A</td>
+          <td>A-07</td>
+          <td>Cancelado</td>
+          <td>
+            -
+          </td>
+        </tr>
+        <tr>
+          <td>05/05/2025</td>
+          <td>10:00 - 16:00</td>
+          <td>Zona B</td>
+          <td>B-02</td>
+          <td>Usado</td>
+          <td>
+            -
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    // Agregar funcionalidad para cancelar reservas
+    document.querySelectorAll('.btn-secondary').forEach(button => {
+      button.addEventListener('click', function() {
+        if (confirm('¿Está seguro que desea cancelar esta reserva?')) {
+          alert('Reserva cancelada con éxito');
+          this.parentElement.parentElement.querySelector('td:nth-child(5)').textContent = 'Cancelado';
+          this.parentElement.innerHTML = '-';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

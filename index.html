@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Gestión de Parqueaderos</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Estilos específicos para la página de inicio */
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/placeholder.svg?height=800&width=1200');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: white;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
+    
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    
+    .btn-primary {
+      background-color: #4caf50;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 4px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    .btn-outline {
+      background-color: transparent;
+      color: white;
+      padding: 12px 30px;
+      border: 2px solid white;
+      border-radius: 4px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    .btn-primary:hover {
+      background-color: #45a049;
+    }
+    
+    .btn-outline:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .features {
+      padding: 80px 20px;
+      text-align: center;
+    }
+    
+    .features h2 {
+      margin-bottom: 50px;
+    }
+    
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .feature-item {
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .feature-item:hover {
+      transform: translateY(-10px);
+    }
+    
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #4caf50;
+    }
+    
+    .testimonials {
+      background-color: #f9f9f9;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .testimonial-item {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    
+    .testimonial-author {
+      font-weight: bold;
+    }
+    
+    .cta {
+      background-color: #4caf50;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    
+    .cta h2 {
+      color: white;
+      margin-bottom: 30px;
+    }
+    
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .logo {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+    
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .feature-grid, .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="logo">ParkSystem</a>
+    <div class="nav-links">
+      <a href="#features">Características</a>
+      <a href="#testimonials">Testimonios</a>
+      <a href="login.html">Iniciar Sesión</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Sistema Inteligente de Gestión de Parqueaderos</h1>
+    <p>Optimiza la gestión de tus espacios de estacionamiento con nuestra plataforma integral. Reservas en línea, control de acceso y reportes detallados en un solo lugar.</p>
+    <div class="btn-group">
+      <a href="login.html" class="btn-primary">Iniciar Sesión</a>
+      <a href="#features" class="btn-outline">Conocer Más</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <h2>Características Principales</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <div class="feature-icon">🚗</div>
+        <h3>Reservas en Línea</h3>
+        <p>Permite a los usuarios reservar espacios de estacionamiento desde cualquier dispositivo, en cualquier momento.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📊</div>
+        <h3>Reportes Detallados</h3>
+        <p>Obtén estadísticas de uso, ocupación e ingresos para tomar decisiones basadas en datos.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔒</div>
+        <h3>Control de Acceso</h3>
+        <p>Gestiona entradas y salidas de vehículos con un sistema de control eficiente y seguro.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📱</div>
+        <h3>Aplicación Móvil</h3>
+        <p>Accede a todas las funcionalidades desde tu dispositivo móvil con nuestra aplicación intuitiva.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">⏱️</div>
+        <h3>Tiempo Real</h3>
+        <p>Visualiza la disponibilidad de espacios en tiempo real para una mejor planificación.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">💼</div>
+        <h3>Múltiples Roles</h3>
+        <p>Diferentes niveles de acceso para administradores, usuarios y personal de seguridad.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-item">
+        <p class="testimonial-text">"Desde que implementamos este sistema, la gestión de nuestro estacionamiento es mucho más eficiente. Los usuarios están satisfechos y nuestros ingresos han aumentado."</p>
+        <p class="testimonial-author">- Carlos Rodríguez, Centro Comercial Plaza Mayor</p>
+      </div>
+      <div class="testimonial-item">
+        <p class="testimonial-text">"La facilidad para reservar espacios y la visualización en tiempo real han mejorado significativamente la experiencia de nuestros visitantes."</p>
+        <p class="testimonial-author">- María González, Hospital Central</p>
+      </div>
+      <div class="testimonial-item">
+        <p class="testimonial-text">"Los reportes detallados nos permiten tomar decisiones estratégicas sobre la gestión de nuestros espacios de estacionamiento."</p>
+        <p class="testimonial-author">- Juan Pérez, Universidad Nacional</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <h2>¿Listo para optimizar la gestión de tu parqueadero?</h2>
+    <a href="login.html" class="btn-outline">Comenzar Ahora</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 ParkSystem - Sistema de Gestión de Parqueaderos</p>
+    <p>Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    
+    // Simple header scroll effect
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('.header');
+      if (window.scrollY > 50) {
+        header.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+      } else {
+        header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+      }
+    });
+  </script>
+</body>
+</html>

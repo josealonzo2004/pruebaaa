@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Parqueaderos - Sistema de Parqueaderos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="admin-panel.html">Inicio</a>
+      <a href="user-management.html">Usuarios</a>
+      <a href="parking-management.html">Parqueaderos</a>
+      <a href="reports.html">Reportes</a>
+      <a href="login.html" style="margin-left: auto;">Cerrar sesión</a>
+    </div>
+    
+    <h1>Gestión de Parqueaderos</h1>
+    
+    <button id="addZoneBtn" style="margin-bottom: 20px;">Agregar nueva zona</button>
+    
+    <div id="zonesList">
+      <div class="card">
+        <h3>Zona A - Principal</h3>
+        <p>Zona principal del edificio administrativo</p>
+        
+        <h4 style="margin-top: 15px;">Espacios:</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Número</th>
+              <th>Tipo</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A-01</td>
+              <td>Automóvil</td>
+              <td>Disponible</td>
+              <td>
+                <button class="btn-secondary">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>A-02</td>
+              <td>Motocicleta</td>
+              <td>Ocupado</td>
+              <td>
+                <button class="btn-secondary">Eliminar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <button>Agregar espacio</button>
+      </div>
+      
+      <div class="card">
+        <h3>Zona B - Visitantes</h3>
+        <p>Zona para visitantes y clientes</p>
+        
+        <h4 style="margin-top: 15px;">Espacios:</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Número</th>
+              <th>Tipo</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>B-01</td>
+              <td>Automóvil</td>
+              <td>Disponible</td>
+              <td>
+                <button class="btn-secondary">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>B-02</td>
+              <td>Automóvil</td>
+              <td>Disponible</td>
+              <td>
+                <button class="btn-secondary">Eliminar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <button>Agregar espacio</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('addZoneBtn').addEventListener('click', function() {
+      alert('Formulario para agregar nueva zona');
+    });
+  </script>
+</body>
+</html>

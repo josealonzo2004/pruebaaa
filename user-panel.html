@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Usuario - Sistema de Parqueaderos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="user-panel.html">Inicio</a>
+      <a href="availability.html">Ver disponibilidad</a>
+      <a href="space-reservation.html">Reservar</a>
+      <a href="reservation-history.html">Historial</a>
+      <a href="login.html" style="margin-left: auto;">Cerrar sesión</a>
+    </div>
+    
+    <h1>Bienvenido, María</h1>
+    <p>¿Qué deseas hacer hoy?</p>
+    
+    <div class="grid">
+      <div class="card">
+        <h3>Ver Disponibilidad</h3>
+        <p>Consulta los espacios disponibles en tiempo real.</p>
+        <a href="availability.html"><button>Acceder</button></a>
+      </div>
+      
+      <div class="card">
+        <h3>Reservar Espacio</h3>
+        <p>Realiza una nueva reserva de parqueadero.</p>
+        <a href="space-reservation.html"><button>Acceder</button></a>
+      </div>
+      
+      <div class="card">
+        <h3>Historial de Reservas</h3>
+        <p>Consulta tus reservas anteriores y actuales.</p>
+        <a href="reservation-history.html"><button>Acceder</button></a>
+      </div>
+    </div>
+    
+    <div style="margin-top: 30px;">
+      <h2>Próximas Reservas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Zona</th>
+            <th>Espacio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>20/05/2025</td>
+            <td>08:00 - 17:00</td>
+            <td>Zona A</td>
+            <td>A-03</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

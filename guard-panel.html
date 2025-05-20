@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel del Vigilante - Sistema de Parqueaderos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="guard-panel.html">Inicio</a>
+      <a href="login.html" style="margin-left: auto;">Cerrar sesión</a>
+    </div>
+    
+    <h1>Panel del Vigilante</h1>
+    
+    <div style="margin-bottom: 20px;">
+      <div class="form-group" style="display: inline-block; width: 300px; margin-right: 10px;">
+        <label for="searchPlate">Buscar por placa o escanear QR:</label>
+        <input type="text" id="searchPlate" placeholder="Ingrese placa o escanee QR">
+      </div>
+      <button id="searchBtn">Buscar</button>
+      <button id="scanQRBtn">Escanear QR</button>
+    </div>
+    
+    <h2>Reservas Activas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Usuario</th>
+          <th>Placa</th>
+          <th>Zona</th>
+          <th>Espacio</th>
+          <th>Hora Entrada</th>
+          <th>Hora Salida</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>María López</td>
+          <td>ABC123</td>
+          <td>Zona A</td>
+          <td>A-03</td>
+          <td>08:15</td>
+          <td>17:00</td>
+          <td>Dentro</td>
+          <td>
+            <button>Registrar Salida</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Juan Pérez</td>
+          <td>XYZ789</td>
+          <td>Zona B</td>
+          <td>B-05</td>
+          <td>-</td>
+          <td>18:00</td>
+          <td>Pendiente</td>
+          <td>
+            <button>Registrar Entrada</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div id="vehicleDetails" style="margin-top: 30px; display: none;">
+      <h2>Detalles del Vehículo</h2>
+      <div class="card">
+        <h3>Información de Reserva</h3>
+        <p><strong>Usuario:</strong> Carlos Rodríguez</p>
+        <p><strong>Placa:</strong> DEF456</p>
+        <p><strong>Zona:</strong> Zona A</p>
+        <p><strong>Espacio:</strong> A-07</p>
+        <p><strong>Hora Entrada:</strong> 09:00</p>
+        <p><strong>Hora Salida:</strong> 16:00</p>
+        <p><strong>Estado:</strong> Pendiente</p>
+        
+        <div style="margin-top: 15px;">
+          <button>Registrar Entrada</button>
+          <button class="btn-secondary">Rechazar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('searchBtn').addEventListener('click', function() {
+      const plate = document.getElementById('searchPlate').value;
+      if (plate) {
+        document.getElementById('vehicleDetails').style.display = 'block';
+      } else {
+        alert('Por favor ingrese una placa');
+      }
+    });
+    
+    document.getElementById('scanQRBtn').addEventListener('click', function() {
+      alert('Escaneando código QR...');
+      setTimeout(function() {
+        document.getElementById('vehicleDetails').style.display = 'block';
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

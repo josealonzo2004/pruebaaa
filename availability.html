@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ver Disponibilidad - Sistema de Parqueaderos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="user-panel.html">Inicio</a>
+      <a href="availability.html">Ver disponibilidad</a>
+      <a href="space-reservation.html">Reservar</a>
+      <a href="reservation-history.html">Historial</a>
+      <a href="login.html" style="margin-left: auto;">Cerrar sesión</a>
+    </div>
+    
+    <h1>Disponibilidad de Espacios</h1>
+    
+    <div style="margin-bottom: 20px;">
+      <div class="form-group" style="display: inline-block; width: 200px; margin-right: 10px;">
+        <label for="vehicleTypeFilter">Tipo de vehículo:</label>
+        <select id="vehicleTypeFilter">
+          <option value="all">Todos</option>
+          <option value="car">Automóvil</option>
+          <option value="motorcycle">Motocicleta</option>
+        </select>
+      </div>
+      <button id="filterAvailabilityBtn">Filtrar</button>
+    </div>
+    
+    <div class="card">
+      <h3>Zona A - Principal</h3>
+      <p>Espacios disponibles: 8/15</p>
+      
+      <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));">
+        <div class="space available">A-01</div>
+        <div class="space occupied">A-02</div>
+        <div class="space available">A-03</div>
+        <div class="space occupied">A-04</div>
+        <div class="space available">A-05</div>
+        <div class="space available">A-06</div>
+        <div class="space occupied">A-07</div>
+        <div class="space available">A-08</div>
+        <div class="space occupied">A-09</div>
+        <div class="space available">A-10</div>
+      </div>
+      
+      <div style="margin-top: 10px;">
+        <span style="display: inline-block; width: 20px; height: 20px; background-color: #c8e6c9; margin-right: 5px;"></span> Disponible
+        <span style="display: inline-block; width: 20px; height: 20px; background-color: #ffcdd2; margin-left: 15px; margin-right: 5px;"></span> Ocupado
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3>Zona B - Visitantes</h3>
+      <p>Espacios disponibles: 5/10</p>
+      
+      <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));">
+        <div class="space available">B-01</div>
+        <div class="space available">B-02</div>
+        <div class="space occupied">B-03</div>
+        <div class="space occupied">B-04</div>
+        <div class="space available">B-05</div>
+        <div class="space occupied">B-06</div>
+        <div class="space available">B-07</div>
+        <div class="space occupied">B-08</div>
+        <div class="space occupied">B-09</div>
+        <div class="space available">B-10</div>
+      </div>
+      
+      <div style="margin-top: 10px;">
+        <span style="display: inline-block; width: 20px; height: 20px; background-color: #c8e6c9; margin-right: 5px;"></span> Disponible
+        <span style="display: inline-block; width: 20px; height: 20px; background-color: #ffcdd2; margin-left: 15px; margin-right: 5px;"></span> Ocupado
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('filterAvailabilityBtn').addEventListener('click', function() {
+      alert('Filtrando por tipo de vehículo...');
+    });
+  </script>
+</body>
+</html>
